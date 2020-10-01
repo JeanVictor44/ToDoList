@@ -3,7 +3,7 @@
   <img src = "YOUR_LOGO_URL" alt = "YOUR_PROJECT_NAME" width = "120">
 <br>
 <br>
-YOUR_PROJECT_NAME
+To Do List
 </h1>
 
 <p align = "center"> Uma pequena descrição sobre seu projeto </p>
