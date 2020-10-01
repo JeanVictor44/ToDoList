@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+html, body {
+    height: 100vh;
+}
+body {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+.container {
+    width: 100%;
+    width: 350px;
+}
+input[type="text"] {
+    background-color: #2E3D52;
+    border:none;
+    height:45px;
+    outline: none;
+    color:#fff;
+    font-size:15px;
+    padding-left:8px;
+    flex-grow: 2;
+}
+.containerAdd {
+    display: flex;
+}
+button {
+    background-color: #0cc0b4;
+    border: none;
+    color:#fff;
+    flex-grow: 0.6;
+    font-size: 20px;
+    font-weight: bold;
+    outline:none;
+    cursor: pointer;
+}
+.container {
+    margin-top:10px;
+}
+input[type="checkbox"]:checked + p{
+    text-decoration: line-through;
+}
+input[type="checkbox"]:checked {
+    background-color: #004FA7;
+}
+input[type="checkbox"] {
+    margin-right: 5px;
+    margin-top: 5px;
+    height:14px;
+    width: 14px; 
+    
+    border:1px solid #000;
+    border-radius:7px;
+}
+li {
+    background-color: #fff;
+    min-height: 40px;/* Ele começa com 40px, porém se o conteúdo crescer, ele cresce junto */
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+p {
+    width: 100%;
+    word-break: break-all; /*Se a palavra for passar do conteiner ele quebra esta palavra*/
+
+}
+
+
+
+
