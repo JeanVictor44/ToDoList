@@ -1,9 +1,9 @@
 <h1 align = "center">
-<br>
-  <img src = "YOUR_LOGO_URL" alt = "YOUR_PROJECT_NAME" width = "120">
-<br>
-<br>
-To Do List
+  <br>
+    <img src = "YOUR_LOGO_URL" alt = "YOUR_PROJECT_NAME" width = "120">
+  <br>
+  <br>
+  To Do List
 </h1>
 
 <p align = "center"> Uma pequena descrição sobre seu projeto </p>
@@ -24,17 +24,18 @@ To Do List
 
 ## Recursos
 [//]: # (Adicione os recursos do seu projeto aqui :)
-Este aplicativo apresenta todas as ferramentas e práticas mais recentes em desenvolvimento móvel!
+Este site apresenta as principais linguagens da Web!
 
-- ⚛️ ** React Js ** - Uma biblioteca JavaScript para construir interfaces de usuário
-- ⚛️ ** React Native ** - Uma biblioteca que fornece uma maneira de criar aplicativos nativos para Android e iOS
-- 💹 ** Node Js ** - Uma estrutura da web para Node Js
+- ⚛️ ** Javascript ** - Uma biblioteca JavaScript para construir interfaces de usuário
+- ⚛️ ** HTML5 ** - Uma biblioteca que fornece uma maneira de criar aplicativos nativos para Android e iOS
+- 💹 ** CSS3 ** - Uma estrutura da web para Node Js
 
 ## Começando
 
-Descreva aqui a forma de usar / instalar seu projeto
+Descreva aqui a forma de usar
 
-
+1- Clone este repositório em sua máquina com o seguinte comando git clone https://github.com/JeanVictor44/ToDoList
+2- Agora é só abrir o index.html em seu browser favorito 
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT - consulte a página [LICENSE] (https://opensource.org/licenses/MIT) para obter detalhes.
