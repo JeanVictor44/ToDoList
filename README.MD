@@ -24,7 +24,7 @@
 
 ## Recursos
 [//]: # (Adicione os recursos do seu projeto aqui :)
-Este site apresenta as principais linguagens da Web!
+Este projeto apresenta as principais linguagens da Web!
 
 - ⚛️ ** Javascript ** - Uma biblioteca JavaScript para construir interfaces de usuário
 - ⚛️ ** HTML5 ** - Uma biblioteca que fornece uma maneira de criar aplicativos nativos para Android e iOS
@@ -34,7 +34,7 @@ Este site apresenta as principais linguagens da Web!
 
 Descreva aqui a forma de usar
 
-1- Clone este repositório em sua máquina com o seguinte comando git clone https://github.com/JeanVictor44/ToDoList
+1- Clone este repositório em sua máquina com o seguinte comando git clone https://github.com/JeanVictor44/ToDoList<br />
 2- Agora é só abrir o index.html em seu browser favorito 
 ## Licença
 
