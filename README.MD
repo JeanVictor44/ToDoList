@@ -6,7 +6,7 @@
   To Do List
 </h1>
 
-<p align = "center"> Uma pequena descrição sobre seu projeto </p>
+<p align = "center"> Um ToDoList para organizar o seu dia e aumentar exponencialmente a sua produtividade.</p>
 
 <p align = "center">
   <a href="https://opensource.org/licenses/MIT">
@@ -16,8 +16,8 @@
 
 [//]: # (Adicione seus gifs / imagens aqui :)
 <div>
-  <img src = "IMAGE_1_URL" alt = "demo" height = "425">
-  <img src = "gifs/ToDoList-Android.gif" alt = "Gif ToDoList Android" height = "425">
+  <img src = "img/ToDoList-PC.jpeg" alt = "demo" height = "425">
+  <img src = "img/ToDoList-Android.gif" alt = "Gif ToDoList Android" height = "425">
 </div>
 
 <hr />
