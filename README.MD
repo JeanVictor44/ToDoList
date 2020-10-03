@@ -16,7 +16,7 @@
 
 [//]: # (Adicione seus gifs / imagens aqui :)
 <div>
-  <img src = "img/ToDoList-PC.jpeg" alt = "demo" height = "425">
+  <img src = "img/ToDoList-PC.jpeg" alt = "demo" height = "425" width="600">
   <img src = "img/ToDoList-Android.gif" alt = "Gif ToDoList Android" height = "425">
 </div>
 
