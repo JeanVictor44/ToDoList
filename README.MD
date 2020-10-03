@@ -1,6 +1,6 @@
 <h1 align = "center">
   <br>
-    <img src = "img/LogoTodoList.jpg" alt = "Logo ToDoList" width = "120">
+    <img src = "img/LogoToDoList.jpg" alt = "Logo ToDoList" width = "120">
   <br>
   <br>
   To Do List
