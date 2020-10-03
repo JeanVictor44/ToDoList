@@ -17,7 +17,7 @@
 [//]: # (Adicione seus gifs / imagens aqui :)
 <div>
   <img src = "IMAGE_1_URL" alt = "demo" height = "425">
-  <img src = "IMAGE_2_URL" alt = "demo" height = "425">
+  <img src = "gifs/ToDoList-Android.gif" alt = "Gif ToDoList Android" height = "425">
 </div>
 
 <hr />

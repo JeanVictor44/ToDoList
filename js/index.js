@@ -3,7 +3,7 @@
 // 2- localStorage -> Grava os dados e os matém mesmo que o browser seja fechado ou dê reload
 
 const button = document.querySelector('button')
-const input = document.querySelector('input[type="text"]')
+const inputTask = document.querySelector('input[type="text"]')
 const boxAllTask = document.querySelector('ul') 
 
 
@@ -13,11 +13,10 @@ function verifyLocalStorage(keys){
     }
 }
 
-function createItems(){
-    const taskTyped = input.value
-    const boxTask = document.createElement('li')
-    
-    if(taskTyped.length > 0){
+function createItems(){    
+    const taskTyped = inputTask.value
+    if(taskTyped.length > 0){ 
+        const boxTask = document.createElement('li')    
         const checkBox = document.createElement('input')
         checkBox.setAttribute('type','checkbox') 
         const paragraph = document.createElement('p')
@@ -29,7 +28,7 @@ function createItems(){
         
         //Gravar item no localStorage
         localStorage.setItem(document.querySelectorAll('li').length,`<li> <input type="checkbox"> <p>${taskTyped}</p></li>`) 
-        input.value = ""
+        inputTask.value = ""
     }
 }
 
@@ -43,5 +42,5 @@ window.addEventListener('load',verifyLocalStorage(Object.keys(localStorage) ))
 button.addEventListener('click',createItems)
 document.addEventListener('keydown',insertTask)
 
-//adicionar funcionalidade de gravar se a checkbox estava checkada ou não
+// Adicionar funcionalidade para verificar no momento do carregamento se a checkbox estava checkada ou não na última entrada do usuário
 // Adicionar funcionalidade de informar data de conclusão da atividade, e horário
