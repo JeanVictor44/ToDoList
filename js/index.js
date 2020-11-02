@@ -2,45 +2,112 @@
 // 1- sessionStorage -> grava os dados, porém os exclui se houver qualque reload ou fechamento do Browser
 // 2- localStorage -> Grava os dados e os matém mesmo que o browser seja fechado ou dê reload
 
-const button = document.querySelector('button')
+const buttonToAddTask = document.querySelector('button')
 const inputTask = document.querySelector('input[type="text"]')
 const boxAllTask = document.querySelector('ul') 
+let tasks = []
 
 
-function verifyLocalStorage(keys){
+function createsTheTaskStructure(){
+    const task = document.createElement('li')
+    const checkbox = document.createElement('input')
+    const paragraph = document.createElement('p')
+    const deleteIcon = document.createElement('i')
+    checkbox.setAttribute('type','checkbox')        
+    deleteIcon.classList.add('fas')
+    deleteIcon.classList.add('fa-trash-alt')
+    return [task, checkbox, paragraph, deleteIcon]
+}
+
+function addElementsInTask(task,...elements){
+    elements.forEach((element) => {
+        task.appendChild(element)
+    })
+}
+function saveStateCheckbox(checkbox, objectTask){
     return function(){
-        keys.forEach(key => boxAllTask.innerHTML += localStorage.getItem(key))
+        if(checkbox.checked){
+            objectTask.checked = true
+        } else {
+            objectTask.checked = false
+        }
+        /* find index element in checkbox and update the localstorage  */    
+        const index = tasks.findIndex((e)=> {
+            return e.id === objectTask.id
+        })
+        tasks.splice(index,1,objectTask)
+        localStorage.setItem('todos',JSON.stringify(tasks))
     }
 }
 
-function createItems(){    
-    const taskTyped = inputTask.value
-    if(taskTyped.length > 0){ 
-        const boxTask = document.createElement('li')    
-        const checkBox = document.createElement('input')
-        checkBox.setAttribute('type','checkbox') 
-        const paragraph = document.createElement('p')
-        paragraph.textContent = taskTyped 
-        console.log(paragraph)
-        boxTask.appendChild(checkBox) 
-        boxTask.appendChild(paragraph)
-        boxAllTask.appendChild(boxTask)
+function createTask(){
+    const value = inputTask.value.trim() 
+    if(value){
+        /* Creating the elements */        
+        const [task, checkbox, paragraph, deleteIcon] = createsTheTaskStructure()
+                     
         
-        //Gravar item no localStorage
-        localStorage.setItem(document.querySelectorAll('li').length,`<li> <input type="checkbox"> <p>${taskTyped}</p></li>`) 
-        inputTask.value = ""
+        /* content paragraph */
+        paragraph.textContent = value
+
+        /* Add elements in task */
+        addElementsInTask(task,checkbox,paragraph,deleteIcon)
+
+        /* add task in matrix */
+        const objectTask = {
+            id:Date.now(),//O método Date.now() retorna o número de milisegundos decorridos desde 1° de janeiro de 1970 00:00:00
+            checked:false,
+            taskTyped:value
+        }
+         
+        /* Events*/
+        deleteIcon.addEventListener('click',deleteTask(objectTask.id,task))
+        checkbox.addEventListener('change',saveStateCheckbox(checkbox,objectTask))
+        tasks.push(objectTask)
+        localStorage.setItem('todos',JSON.stringify(tasks))
+        return task
+    }
+}
+function deleteTask(id,task){
+    return function(){
+        boxAllTask.removeChild(task)
+        tasks = tasks.filter((e) => e.id !== id)
+        localStorage.setItem('todos',JSON.stringify(tasks))
+    }   
+}
+
+function addTask(){
+    const task = createTask()
+    if(task){
+        boxAllTask.appendChild(task)
+        inputTask.value = ''
+    }
+}
+function renderTodos(){
+    const todos = JSON.parse(localStorage.getItem('todos'))
+    if(todos.length){
+        /* pegar cada tarefa, criar cada checkbox, checkada ou não, e é issooo */
+        todos.forEach((objectTask) => {
+            const [task, checkbox, paragraph, deleteIcon] = createsTheTaskStructure()
+            paragraph.textContent = objectTask.taskTyped
+            checkbox.checked = objectTask.checked
+
+            /* Events delete and save state of checkbox */
+            deleteIcon.addEventListener('click',deleteTask(objectTask.id,task))
+            checkbox.addEventListener('change',saveStateCheckbox(checkbox,objectTask))
+
+            addElementsInTask(task,checkbox,paragraph,deleteIcon)
+            boxAllTask.appendChild(task)
+        })
+        tasks = [...todos]
     }
 }
 
-function insertTask(e){
-    if(e.key == 'Enter'){
-        button.click()
+window.addEventListener('load',renderTodos)
+buttonToAddTask.addEventListener('click',addTask)
+document.addEventListener('keydown',function(event) {
+    if(event.key == 'Enter'){   
+        buttonToAddTask.click()
     }
-}
-
-window.addEventListener('load',verifyLocalStorage(Object.keys(localStorage) ))
-button.addEventListener('click',createItems)
-document.addEventListener('keydown',insertTask)
-
-// Adicionar funcionalidade para verificar no momento do carregamento se a checkbox estava checkada ou não na última entrada do usuário
+})
 // Adicionar funcionalidade de informar data de conclusão da atividade, e horário
