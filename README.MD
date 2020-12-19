@@ -21,6 +21,14 @@
 
 <hr />
 
+## Demo 
+ 
+<a href=" https://todolistbyjeanmachado.netlify.app" target="_blank" >Clique neste link para testar a versão demo do ToDoList</a>
+
+## Aprendizado
+ Com esse site pude implementar e ver na prática como a função Local Stoage da API Web Storage funciona. Tive o privilégio de aplicar práticas simples de responsividade, como usar o max-width em vez do width
+ 
+ 
 ## Recursos
 
 Este projeto apresenta as principais linguagens da Web!
@@ -32,7 +40,9 @@ Este projeto apresenta as principais linguagens da Web!
 ## Começando
 
 1- Clone este repositório em sua máquina com o seguinte comando git clone https://github.com/JeanVictor44/ToDoList<br />
-2- Agora é só abrir o index.html em seu browser favorito 
+2- Agora é só abrir o index.html em seu browser favorito
+
+
 
 ## Licença
 
