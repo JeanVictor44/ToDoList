@@ -23,7 +23,7 @@
 
 ## Demo 
  
-<a href=" https://todolistbyjeanmachado.netlify.app" target="_blank" >Clique neste link para testar a versão demo do ToDoList</a>
+<a href="https://todolistbyjeanmachado.netlify.app" target="_blank" >Clique neste link para testar a versão demo do ToDoList</a>
 
 ## Aprendizado
  Com esse site pude implementar e ver na prática como a função Local Stoage da API Web Storage funciona. Tive o privilégio de aplicar práticas simples de responsividade, como usar o max-width em vez do width
